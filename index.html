@@ -52,7 +52,44 @@
       }
       .teams > div {
         align-self: flex-start;
-        padding: 30px;
+        padding: 0 30px;
+      }
+      @media screen and (max-width: 1200px) {
+        .main-section {
+          padding: 50px 60px;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        .main-section {
+          padding: 50px 15px;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .main-section {
+          padding: 30px 0;
+        }
+        h1 {
+          font-size: 32px;
+        }
+        h2 {
+          font-size: 24px;
+        }
+      }
+      @media screen and (max-width: 576px) {
+        h1 {
+          font-size: 24px;
+        }
+        h2 {
+          font-size: 20px;
+        }
+        span, button {
+          font-size: 14px !important;
+          padding: 5px !important;
+        }
+        .col-3 {
+          font-size: 14px;
+          padding-left: 0;
+        }
       }
     </style>
 </head>
@@ -64,63 +101,63 @@
       <h1 class="mb-5">شاخای خاقانی به جز امیرحسین</h1>
       <h2 class="mb-4">سید بندی:</h2>
       <div class="row mb-5">
-        <div class="col-12 mb-2">
+        <div class="col-12 mb-1">
           <div class="row">
             <div class="col-3 text-left">
               سید اول:
             </div>
             <div class="col-9">
-              <span class="btn btn-success">امین</span>
-              <span class="btn btn-success">امیرحسین</span>
-              <span class="btn btn-success">رضا</span>
+              <span class="btn btn-success mb-2">امین</span>
+              <span class="btn btn-success mb-2">امیرحسین</span>
+              <span class="btn btn-success mb-2">رضا</span>
             </div>
           </div>
         </div>
-        <div class="col-12 mb-2">
+        <div class="col-12 mb-1">
           <div class="row">
             <div class="col-3 text-left">
               سید دوم:
             </div>
             <div class="col-9">
-              <span class="btn btn-primary">محمد صوتی</span>
-              <span class="btn btn-primary">محمدرضا</span>
-              <span class="btn btn-primary">مجتبی</span>
+              <span class="btn btn-primary mb-2">محمد صوتی</span>
+              <span class="btn btn-primary mb-2">محمدرضا</span>
+              <span class="btn btn-primary mb-2">مجتبی</span>
             </div>
           </div>
         </div>
-        <div class="col-12 mb-2">
+        <div class="col-12 mb-1">
           <div class="row">
             <div class="col-3 text-left">
               سید سوم:
             </div>
             <div class="col-9">
-              <span class="btn btn-warning">سینا</span>
-              <span class="btn btn-warning">محمد سعادت</span>
-              <span class="btn btn-warning">پویا</span>
+              <span class="btn btn-warning mb-2">سینا</span>
+              <span class="btn btn-warning mb-2">محمد سعادت</span>
+              <span class="btn btn-warning mb-2">پویا</span>
             </div>
           </div>
         </div>
-        <div class="col-12 mb-2">
+        <div class="col-12 mb-1">
           <div class="row">
             <div class="col-3 text-left">
               سید چهارم:
             </div>
             <div class="col-9">
-              <span class="btn btn-info">مهدی</span>
-              <span class="btn btn-info">محمد امیری</span>
-              <span class="btn btn-info">حامد</span>
+              <span class="btn btn-info mb-2">مهدی</span>
+              <span class="btn btn-info mb-2">محمد امیری</span>
+              <span class="btn btn-info mb-2">حامد</span>
             </div>
           </div>
         </div>
-        <div class="col-12 mb-2">
+        <div class="col-12 mb-1">
           <div class="row">
             <div class="col-3 text-left">
                سید گلرها:
             </div>
             <div class="col-9">
-              <span class="btn btn-danger">نوید</span>
-              <span class="btn btn-danger">مصطفی</span>
-              <span class="btn btn-danger">معین</span>
+              <span class="btn btn-danger mb-2">نوید</span>
+              <span class="btn btn-danger mb-2">مصطفی</span>
+              <span class="btn btn-danger mb-2">معین</span>
             </div>
           </div>
         </div>
@@ -129,24 +166,24 @@
         <button id="generate-teams" class="btn btn-default">ایجاد تیم ها</button>
       </div>
       <div class="teams row text-center">
-        <div class="col-md-4 col-sm-12 col-12 mb-5">
-          <h5 class="mb-4">تیم اول</h5>
+        <div class="col-md-4 col-sm-12 col-12 mb-4">
+          <h5 class="mb-3">تیم اول</h5>
           <span class="mb-2 btn btn-success" id="team1seed1"></span>
           <span class="mb-2 btn btn-primary" id="team1seed2"></span>
           <span class="mb-2 btn btn-warning" id="team1seed3"></span>
           <span class="mb-2 btn btn-info" id="team1seed4"></span>
           <span class="mb-2 btn btn-danger" id="team1seed5"></span>
         </div>
-        <div class="col-md-4 col-sm-12 col-12 mb-5">
-          <h5 class="mb-4">تیم دوم</h5>
+        <div class="col-md-4 col-sm-12 col-12 mb-4">
+          <h5 class="mb-3">تیم دوم</h5>
           <span class="mb-2 btn btn-success" id="team2seed1"></span>
           <span class="mb-2 btn btn-primary" id="team2seed2"></span>
           <span class="mb-2 btn btn-warning" id="team2seed3"></span>
           <span class="mb-2 btn btn-info" id="team2seed4"></span>
           <span class="mb-2 btn btn-danger" id="team2seed5"></span>
         </div>
-        <div class="col-md-4 col-sm-12 col-12 mb-5">
-          <h5 class="mb-4">تیم سوم</h5>
+        <div class="col-md-4 col-sm-12 col-12 mb-4">
+          <h5 class="mb-3">تیم سوم</h5>
           <span class="mb-2 btn btn-success" id="team3seed1"></span>
           <span class="mb-2 btn btn-primary" id="team3seed2"></span>
           <span class="mb-2 btn btn-warning" id="team3seed3"></span>
