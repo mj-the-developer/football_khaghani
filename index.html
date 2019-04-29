@@ -150,7 +150,7 @@
             </div>
             <div class="col-9">
               <span class="btn btn-primary mb-2">امیرحسین</span>
-              <span class="btn btn-primary mb-2">سینا</span>
+              <span class="btn btn-primary mb-2">مرتضی</span>
               <span class="btn btn-primary mb-2">مجتبی</span>
             </div>
           </div>
@@ -161,7 +161,7 @@
               سید سوم:
             </div>
             <div class="col-9">
-              <span class="btn btn-warning mb-2">مهدی</span>
+              <span class="btn btn-warning mb-2">سینا</span>
               <span class="btn btn-warning mb-2">سعادت</span>
               <span class="btn btn-warning mb-2">پویا</span>
             </div>
@@ -173,7 +173,7 @@
               سید چهارم:
             </div>
             <div class="col-9">
-              <span class="btn btn-info mb-2">رفیق امین</span>
+              <span class="btn btn-info mb-2">حامد</span>
               <span class="btn btn-info mb-2">معین</span>
               <span class="btn btn-info mb-2">محمدعلی</span>
             </div>
@@ -187,7 +187,7 @@
             <div class="col-9">
               <span class="btn btn-danger mb-2">نوید</span>
               <span class="btn btn-danger mb-2">مصطفی</span>
-              <span class="btn btn-danger mb-2">حامد</span>
+              <span class="btn btn-danger mb-2">مهدی</span>
             </div>
           </div>
         </div>
@@ -196,7 +196,7 @@
         <button id="generate-teams" class="btn btn-default">ایجاد تیم ها</button>
       </div>
       <div class="text-center" id="sinaErr">
-        * یه بار دیگه. سینا و رضا افتادن تو یه تیم.
+        خطا. مجددا تلاش کنید.
       </div>
       <div class="teams text-center">
         <div class="row mb-3">
@@ -242,10 +242,10 @@
 
        // Seeds
        var seed1 = ['امین', 'محمدرضا', 'رضا'];
-       var seed2 = ['امیرحسین', 'سینا', 'مجتبی'];
-       var seed3 = ['مهدی', 'سعادت', 'پویا'];
-       var seed4 = ['محمدعلی', 'رفیق امین', 'معین'];
-       var seed5 = ['نوید', 'مصطفی', 'حامد'];
+       var seed2 = ['امیرحسین', 'مرتضی', 'مجتبی'];
+       var seed3 = ['سینا', 'سعادت', 'پویا'];
+       var seed4 = ['محمدعلی', 'حامد', 'معین'];
+       var seed5 = ['نوید', 'مصطفی', 'مهدی'];
 
        // Shuffle Arrays
        shuffle(seed1);
@@ -254,7 +254,9 @@
        shuffle(seed4);
        shuffle(seed5);
 
-       if((seed1[0] === 'رضا' && seed2[0] === 'سینا') || (seed1[1] === 'رضا' && seed2[1] === 'سینا') || (seed1[2] === 'رضا' && seed2[2] === 'سینا')) {
+       if((seed1[0] === 'رضا' && seed3[0] === 'سینا') || (seed1[1] === 'رضا' && seed3[1] === 'سینا') || (seed1[2] === 'رضا' && seed3[2] === 'سینا')) {
+         $('#sinaErr').fadeIn().delay(2000).fadeOut();
+       } else if((seed1[0] === 'امین' && seed2[0] !== 'مرتضی') || (seed1[1] === 'امین' && seed2[1] !== 'مرتضی') || (seed1[2] === 'امین' && seed2[2] !== 'مرتضی')) {
          $('#sinaErr').fadeIn().delay(2000).fadeOut();
        } else {
          $('.teams').fadeIn();
