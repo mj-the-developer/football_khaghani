@@ -1,5 +1,4 @@
-محمد امیری﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="fa">
 <head>
     <title>فوتبال خاقانی</title>
@@ -137,9 +136,9 @@
               سید اول:
             </div>
             <div class="col-9">
-              <span class="btn btn-success mb-2">داوود</span>
+              <span class="btn btn-success mb-2">مجتبی</span>
               <span class="btn btn-success mb-2">امین</span>
-              <span class="btn btn-success mb-2">محمدرضا</span>
+              <span class="btn btn-success mb-2">محمد صوتی</span>
             </div>
           </div>
         </div>
@@ -150,8 +149,8 @@
             </div>
             <div class="col-9">
               <span class="btn btn-primary mb-2">رضا</span>
-              <span class="btn btn-primary mb-2">محمد صوتی</span>
-              <span class="btn btn-primary mb-2">مجتبی</span>
+              <span class="btn btn-primary mb-2">سینا</span>
+              <span class="btn btn-primary mb-2">محمد سعادت</span>
             </div>
           </div>
         </div>
@@ -161,9 +160,9 @@
               سید سوم:
             </div>
             <div class="col-9">
-              <span class="btn btn-warning mb-2">مهدی</span>
-              <span class="btn btn-warning mb-2">سینا</span>
-              <span class="btn btn-warning mb-2">محمد سعادت</span>
+              <span class="btn btn-warning mb-2">غایب اول</span>
+              <span class="btn btn-warning mb-2">پویا</span>
+              <span class="btn btn-warning mb-2">محمد امیری</span>
             </div>
           </div>
         </div>
@@ -173,7 +172,7 @@
               سید چهارم:
             </div>
             <div class="col-9">
-              <span class="btn btn-info mb-2">پویا</span>
+              <span class="btn btn-info mb-2">غایب دوم</span>
               <span class="btn btn-info mb-2">معین</span>
               <span class="btn btn-info mb-2">محمدعلی</span>
             </div>
@@ -187,7 +186,7 @@
             <div class="col-9">
               <span class="btn btn-danger mb-2">جاوید</span>
               <span class="btn btn-danger mb-2">مصطفی</span>
-              <span class="btn btn-danger mb-2">محمد امیری</span>
+              <span class="btn btn-danger mb-2">غایب سوم</span>
             </div>
           </div>
         </div>
@@ -241,11 +240,11 @@
      $('#generate-teams').click(function() {
 
        // Seeds
-       var seed1 = ['امین', 'داوود', 'محمدرضا'];
-       var seed2 = ['رضا', 'محمد صوتی', 'مجتبی'];
-       var seed3 = ['مهدی', 'سینا', 'محمد سعادت'];
-       var seed4 = ['محمدعلی', 'پویا', 'معین'];
-       var seed5 = ['جاوید', 'مصطفی', 'محمد امیری'];
+       var seed1 = ['امین', 'مجتبی', 'محمد صوتی'];
+       var seed2 = ['رضا', 'سینا', 'محمد سعادت'];
+       var seed3 = ['غایب اول', 'پویا', 'محمد امیری'];
+       var seed4 = ['محمدعلی', 'غایب دوم', 'معین'];
+       var seed5 = ['جاوید', 'مصطفی', 'غایب سوم'];
 
        // Shuffle Arrays
        shuffle(seed1);
@@ -254,7 +253,7 @@
        shuffle(seed4);
        shuffle(seed5);
 
-       if((seed3[0] === 'سینا' && seed2[0] === 'رضا') || (seed3[1] === 'سینا' && seed2[1] === 'رضا') || (seed3[2] === 'سینا' && seed2[2] === 'رضا')) {
+       if((seed3[0] === 'پویا' && seed2[0] === 'رضا') || (seed3[1] === 'پویا' && seed2[1] === 'رضا') || (seed3[2] === 'پویا' && seed2[2] === 'رضا')) {
          $('#sinaErr').fadeIn().delay(2000).fadeOut();
        } else {
          $('.teams').fadeIn();
