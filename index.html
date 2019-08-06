@@ -223,9 +223,6 @@
       <div class="text-center mb-1">
         <button id="generate-teams" class="btn btn-info">ایجاد تیم ها</button>
       </div>
-      <div class="text-center" id="sinaErr">
-        خطا. مجددا تلاش کنید.
-      </div>
       <div class="teams text-center">
         <div class="row mb-3">
           <div class="col-md-4 col-sm-12 col-12 mb-4">
@@ -290,27 +287,24 @@
        shuffle(seed4);
        shuffle(seed5);
 
-       if((seed3[0] === 'سینا' && seed2[0] === 'رضا') || (seed3[1] === 'سینا' && seed2[1] === 'رضا') || (seed3[2] === 'سینا' && seed2[2] === 'رضا')) {
-         $('#sinaErr').fadeIn().delay(2000).fadeOut();
-       } else {
-         $('.teams').fadeIn();
-         // Generate Teams
-         document.getElementById('team1seed1').innerHTML = seed1[0];
-         document.getElementById('team1seed2').innerHTML = seed2[0];
-         document.getElementById('team1seed3').innerHTML = seed3[0];
-         document.getElementById('team1seed4').innerHTML = seed4[0];
-         document.getElementById('team1seed5').innerHTML = seed5[0];
-         document.getElementById('team2seed1').innerHTML = seed1[1];
-         document.getElementById('team2seed2').innerHTML = seed2[1];
-         document.getElementById('team2seed3').innerHTML = seed3[1];
-         document.getElementById('team2seed4').innerHTML = seed4[1];
-         document.getElementById('team2seed5').innerHTML = seed5[1];
-         document.getElementById('team3seed1').innerHTML = seed1[2];
-         document.getElementById('team3seed2').innerHTML = seed2[2];
-         document.getElementById('team3seed3').innerHTML = seed3[2];
-         document.getElementById('team3seed4').innerHTML = seed4[2];
-         document.getElementById('team3seed5').innerHTML = seed5[2];
-       }
+       $('.teams').fadeIn();
+       
+       // Generate Teams
+       document.getElementById('team1seed1').innerHTML = seed1[0];
+       document.getElementById('team1seed2').innerHTML = seed2[0];
+       document.getElementById('team1seed3').innerHTML = seed3[0];
+       document.getElementById('team1seed4').innerHTML = seed4[0];
+       document.getElementById('team1seed5').innerHTML = seed5[0];
+       document.getElementById('team2seed1').innerHTML = seed1[1];
+       document.getElementById('team2seed2').innerHTML = seed2[1];
+       document.getElementById('team2seed3').innerHTML = seed3[1];
+       document.getElementById('team2seed4').innerHTML = seed4[1];
+       document.getElementById('team2seed5').innerHTML = seed5[1];
+       document.getElementById('team3seed1').innerHTML = seed1[2];
+       document.getElementById('team3seed2').innerHTML = seed2[2];
+       document.getElementById('team3seed3').innerHTML = seed3[2];
+       document.getElementById('team3seed4').innerHTML = seed4[2];
+       document.getElementById('team3seed5').innerHTML = seed5[2];
      });
 
      // Close Modal
