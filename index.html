@@ -41,12 +41,20 @@
         overflow-x: hidden;
       }
       body {
+        background: url('bg.jpeg');
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
         direction: rtl;
         font-family: IRANSansWeb, 'Open Sans';
         margin: 0;
         overflow-x: hidden;
         padding: 0;
         text-align: right;
+      }
+      .container-fluid {
+        background-color: rgba(255,255,255,0.5);
+        height: 100vh;
       }
       .main-section {
         padding: 50px 120px;
@@ -207,7 +215,7 @@
         </div>
       </div>
       <div class="text-center mb-3">
-        <button id="generate-teams" class="btn btn-default">ایجاد تیم ها</button>
+        <button id="generate-teams" class="btn btn-info">ایجاد تیم ها</button>
       </div>
       <div class="text-center" id="sinaErr">
         خطا. مجددا تلاش کنید.
