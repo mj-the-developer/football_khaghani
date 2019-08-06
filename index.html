@@ -83,6 +83,11 @@
         display: none;
         font-size: 14px;
       }
+      .form-control:focus {
+        border: 1px solid orange;
+        box-shadow: none;
+        outline: none;
+      }
       @media screen and (max-width: 1200px) {
         .main-section {
           padding: 50px 60px;
@@ -132,61 +137,71 @@
       <div class="row mb-4">
         <div class="col-12 mb-1">
           <div class="row">
-            <div class="col-3 text-left">
+            <div class="col-3 text-right text-sm-left mb-1 mb-sm-0">
               سید اول:
             </div>
-            <div class="col-9">
-              <span class="btn btn-success mb-2">محمدرضا</span>
-              <span class="btn btn-success mb-2">امین</span>
-              <span class="btn btn-success mb-2">محمد صوتی</span>
+            <div class="col-12 col-sm-9">
+							<div class="row no-gutters">
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed11" class="form-control" value="محمدرضا"></div>
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed12" class="form-control" value="امین"></div>
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed13" class="form-control" value="محمد صوتی"></div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-12 mb-1">
           <div class="row">
-            <div class="col-3 text-left">
+            <div class="col-3 text-right text-sm-left mb-1 mb-sm-0">
               سید دوم:
             </div>
-            <div class="col-9">
-              <span class="btn btn-primary mb-2">رضا</span>
-              <span class="btn btn-primary mb-2">محمد سعادت</span>
-              <span class="btn btn-primary mb-2">مجتبی</span>
+            <div class="col-12 col-sm-9">
+							<div class="row no-gutters">
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed21" class="form-control" value="رضا"></div>
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed22" class="form-control" value="محمد سعادت"></div>
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed23" class="form-control" value="مجتبی"></div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-12 mb-1">
           <div class="row">
-            <div class="col-3 text-left">
+            <div class="col-3 text-right text-sm-left mb-1 mb-sm-0">
               سید سوم:
             </div>
-            <div class="col-9">
-              <span class="btn btn-warning mb-2">مهرداد</span>
-              <span class="btn btn-warning mb-2">سینا</span>
-              <span class="btn btn-warning mb-2">مهدی</span>
+            <div class="col-12 col-sm-9">
+							<div class="row no-gutters">
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed31" class="form-control" value="مهرداد"></div>
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed32" class="form-control" value="سینا"></div>
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed33" class="form-control" value="مهدی"></div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-12 mb-1">
           <div class="row">
-            <div class="col-3 text-left">
+            <div class="col-3 text-right text-sm-left mb-1 mb-sm-0">
               سید چهارم:
             </div>
-            <div class="col-9">
-              <span class="btn btn-info mb-2">معین</span>
-              <span class="btn btn-info mb-2">پویا</span>
-              <span class="btn btn-info mb-2">محمدعلی</span>
+            <div class="col-12 col-sm-9">
+							<div class="row no-gutters">
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed41" class="form-control" value="معین"></div>
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed42" class="form-control" value="پویا"></div>
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed43" class="form-control" value="محمدعلی"></div>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-12 mb-1">
           <div class="row">
-            <div class="col-3 text-left">
+            <div class="col-3 text-right text-sm-left mb-1 mb-sm-0">
                سید گلرها:
             </div>
-            <div class="col-9">
-              <span class="btn btn-danger mb-2">جاوید</span>
-              <span class="btn btn-danger mb-2">مصطفی</span>
-              <span class="btn btn-danger mb-2">محمد امیری</span>
+            <div class="col-12 col-sm-9">
+							<div class="row no-gutters">
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed51" class="form-control" value="جاوید"></div>
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed52" class="form-control" value="مصطفی"></div>
+                <div class="col-4 pr-1 pl-1"><input type="text" id="seed53" class="form-control" value="محمد امیری"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -239,12 +254,20 @@
    $(document).ready(function() {
      $('#generate-teams').click(function() {
 
+       var seeds = [];
+
+       for(var i = 1; i <= 5; i++) {
+         for(var j = 1; j <= 3; j++) {
+           seeds.push(document.getElementById("seed" + i + j).value);
+         }
+       }
+
        // Seeds
-       var seed1 = ['امین', 'محمدرضا', 'محمد صوتی'];
-       var seed2 = ['رضا', 'محمد سعادت', 'مجتبی'];
-       var seed3 = ['مهرداد', 'سینا', 'مهدی'];
-       var seed4 = ['محمدعلی', 'معین', 'پویا'];
-       var seed5 = ['جاوید', 'مصطفی', 'محمد امیری'];
+       var seed1 = [seeds[0], seeds[1], seeds[2]];
+       var seed2 = [seeds[3], seeds[4], seeds[5]];
+       var seed3 = [seeds[6], seeds[7], seeds[8]];
+       var seed4 = [seeds[9], seeds[10], seeds[11]];
+       var seed5 = [seeds[12], seeds[13], seeds[14]];
 
        // Shuffle Arrays
        shuffle(seed1);
