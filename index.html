@@ -314,6 +314,12 @@
      $('#tryAgain').click(function() {
        $('.teams').fadeOut();
      })
+
+     // Clear input on click
+     $('.form-control').click(function() {
+       let mj = $(this);
+       mj[0].value = '';
+     });
    });
    /**
    * Shuffles array in place. ES6 version
